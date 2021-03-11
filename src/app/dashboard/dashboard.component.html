@@ -1,0 +1,9 @@
+<h2>Top Heroes</h2>
+<ul *ngIf='heroes'>
+  <li *ngFor='let hero of heroes' (click)="this.messageService.add('Heroes Component, selected hero id = {{hero.id}}')">
+    <a routerLink='/detail/{{hero.id}}'>
+      {{hero.name}}
+    </a>
+  </li>
+</ul>
+

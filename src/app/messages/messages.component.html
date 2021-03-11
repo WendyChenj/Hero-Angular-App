@@ -1,0 +1,9 @@
+<h2>Messages</h2>
+<!-- messageService is used in this html file which means the data is bind -->
+<!-- Therefore, use public in the class constructor instead of private -->
+<button (click)='messageService.clear()'>Clear messages</button>
+<ul *ngIf='messageService.messages.length'>
+  <li *ngFor='let message of messageService.messages'>
+    {{ message }}
+  </li>
+</ul>
